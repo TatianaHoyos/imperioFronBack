@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>categorias</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    
+    <div  class="row d-flex justify-content-center mt-3 mb-3">
+        <form id="formFiltrar"  class="col-sm-4 text-center"  method="POST" enctype="multipart/form-data">
+            <div class="form-group text-center">
+                <select name="" id="categorias">    
+                </select>
+                <input class="btn btn-outline-info" type="button" onclick="consultarProductoCategoria(event)"  id="filtraCategorias" value="Filtrar">
+            </div>
+        </form>
+    </div>
+    <div  class="row d-flex justify-content-center mt-3 mb-3">
+        <form id="formProductos"  class="col-sm-4 text-center"  method="POST" enctype="multipart/form-data">
+            <div  class="form-group text-center">  
+                <p><strong>Búsqueda de Productos: </strong></p> 
+                <input class="border border-warning" type="" name="" placeholder="Cervezas, Aguardientes,...">
+                    <input class="btn btn-outline-info" type="submit" value="Buscar">
+            </div>
+            
+        </form>
+        
+    </div>
+
+    <div class="container">
+        <div class="container row d-flex justify-content-center mt-3 mb-3">
+        <table id="tablaProductos" class="table table-striped table-dark" >
+            <H3 class="text-center">Información de Productos</H3>
+            <thead >
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>Categoria</th>
+                <th>referencia</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <tbody >
+            
+        </tbody>
+        </table>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="../js/categorias.js"></script>
+</body>
+
+</html>
